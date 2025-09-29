@@ -97,7 +97,7 @@ function updateScheduleCountdown() {
         document.getElementById('schedule2-countdown').textContent = 
             `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         
-        document.getElementById('schedule-status').textContent = "Counting down to first session at 08:00";
+        document.getElementById('schedule-status').textContent = "Counting down to 08:00";
         return;
     }
     
