@@ -1,8 +1,23 @@
 
+.league-spartan-weight {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 20;
+  font-style: normal;
+}
+
+
+.suse-mono-weight {
+  font-family: "SUSE Mono", "League Spartan", "Azeret Mono", "Montserrat", monospace;
+  font-optical-sizing: auto;
+  font-weight: 20;
+  font-style: normal;
+}
 
 body {
-    font-family: "Tahoma", Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #000000, #050733, #030c24);
+    font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/mini5.jpg');
+    background-size: cover;
     color: white;
     text-align: center;
     padding: 20px;
@@ -12,23 +27,61 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: visible;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+* {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+/*
+* {
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 4px;
+        background-color: transparent;
+    }
+} what the fucking fuck?*/
+
+#testingtext {
+    font-size: 0.8rem;
+    color: #cccccc;
+    opacity: 0.7;
+    min-height: 20px;
 }
 
 .container {
     max-width: 800px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
+    background: rgba(98, 98, 105, 0.1);
     border-radius: 20px;
+    outline-width: 1px;
+    outline-color: rgb(110, 110, 141, 0.3);
+    outline-style: solid;
+    padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 0.2rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fffdfa;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 900;
 }
 
 .weekday-display {
@@ -38,6 +91,7 @@ h1 {
     margin: 20px 0;
     padding: 15px;
     border-radius: 15px;
+    outline: #ffffff 1px solid;
     transition: all 0.5s ease;
     background: linear-gradient(45deg, #ff6b6b, #ff9e58);
 }
@@ -48,14 +102,27 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     margin: 30px 0;
+    
 }
+
+#progressBar, #progressBar2 {
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    outline: #ffffff 1px solid;
+}
+
 
 .timer {
     background: rgba(255, 255, 255, 0.1);;
     padding: 20px;
     border-radius: 15px;
     min-width: 280px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     position: relative;
     
@@ -73,22 +140,28 @@ h1 {
 
 h2 {
     margin-top: 0;
-    font-size: 1.8rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.7rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.521);
     padding-bottom: 10px;
-    color: #fdbb2d;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+
 }
 
 .countdown {
     font-size: 3rem;
+    width: 100%;
     font-weight: bold;
-    margin: 20px 0;
-    font-family: 'Courier New', monospace;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0px 0px;
+    font-family: 'Azeret Mono', monospace;
     min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .freedom {
@@ -97,21 +170,21 @@ h2 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-size: 2.8rem;
+    font-size: 3rem;
     text-shadow: none;
 }
 
 
 .description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: 15px;
     line-height: 1.5;
 }
 
 .status {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 10px;
-    font-weight: bold;
+    font-weight: 600;
     min-height: 30px;
 }
 
@@ -142,4 +215,21 @@ footer {
     .freedom {
         font-size: 2.2rem;
     }
+}
+
+.buttonlist {
+    position: fixed;
+    bottom: 25px;
+    right: 40px;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    outline: white 3px solid;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(95, 139, 160);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
